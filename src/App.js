@@ -24,7 +24,7 @@ const App = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector(state => state.auth.user);
-  const { bills} = useSelector((state) => state.bills);
+  
   const toastIdRef = useRef(null);
 
   const today = new Date(); 

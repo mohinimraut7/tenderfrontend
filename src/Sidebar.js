@@ -37,7 +37,7 @@ import { upComingDueBills } from './utils/DueBillHelper';
 import './Sidebar.css';
 import drawerbg from './Images/sidebarimg.jpg'
 import logo from './Images/vvcmclogo.jpg';
-import { fetchBills } from './store/actions/billActions';
+
 const drawerWidth = 240;
 const openedMixin = (theme) => ({
   width: drawerWidth,
@@ -128,42 +128,20 @@ export default function Sidebar() {
   const dispatch = useDispatch();
   const location = useLocation();
   const open = useSelector((state) => state.sidebar.isOpen);
-  const { bills, loading, error } = useSelector((state) => state.bills);
+
   const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
   const user = useSelector(state => state.auth.user);
   const today = new Date(); 
   
   
-const dueAlertrows = upComingDueBills(bills, user);
-
-const dueAlertCount = dueAlertrows.length;
-
-
-const passedDueDateCount = bills.filter(bill => {
-  const dueDate = new Date(bill.dueDate);
-  const isOverdue = dueDate < today;
-  const isUnpaid = bill.paymentStatus === 'unpaid';
-
-  
-  if (user?.role === 'Junior Engineer') {
-    if (user.ward === 'Head Office') {
-     
-      return isOverdue && isUnpaid;
-    } else {
-     
-      return isOverdue && isUnpaid && user.ward === bill.ward;
-    }
-  }
-  return isOverdue && isUnpaid;
-}).length;
 
 
 
-const overdueAlertCount = bills.filter(bill => bill.overdueAlert === true).length;
 
-  useEffect(() => {
-    dispatch(fetchBills());
-  }, [dispatch]);
+
+
+
+
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
