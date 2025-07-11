@@ -138,13 +138,17 @@ const AddRole = ({ open, handleClose, handleAddRole, currentRole, editRole }) =>
                             type="button"
                             onClick={handleClose}
                             variant="contained"
+                             size="small"
                             sx={{
                                 mr: 2,
-                                backgroundColor: '#23CCEF',
+                                backgroundColor: '#FB404B',
                                 width: '100px',
                                 '&:hover': {
-                                    backgroundColor: '#23CCEF',
-                                    opacity: '0.8'
+                                    backgroundColor: '#FB404B',
+                                    opacity: '0.8',
+                                    transform: 'translateY(-1px)',
+                                   boxShadow: '0 4px 12px #FB404B',
+                                  
                                 }
                             }}
                         >
@@ -152,12 +156,21 @@ const AddRole = ({ open, handleClose, handleAddRole, currentRole, editRole }) =>
                         </Button>
                         <Button
                             type="submit"
-                            variant="contained"
+                          
+                             size="small"
+                             variant="outlined"
                             sx={{
-                                backgroundColor: '#FB404B',
+                              backgroundColor:'#20B2AA',
+                              color: '#fff',
+                              borderColor: '#20B2AA',
+                              cursor: 'pointer',
+                              textTransform: 'uppercase',
                                 '&:hover': {
-                                    backgroundColor: '#FB404B',
-                                    opacity: '0.8'
+                                   backgroundColor: '#20B2AA',
+                                   borderColor: '#20B2AA',
+                                   transform: 'translateY(-1px)',
+                                   boxShadow: '0 4px 12px #20B2AA',
+                                   opacity:'0.8'
                                 }
                             }}
                         >

@@ -118,6 +118,7 @@ const AddUser = ({ open, handleClose, handleAddUser,currentUser,editUser }) => {
                         USER NAME
                     </Typography>
                      <TextField
+                        size="small"
                         fullWidth
                         id="username"
                         name="username"
@@ -134,6 +135,7 @@ const AddUser = ({ open, handleClose, handleAddUser,currentUser,editUser }) => {
                         EMAIL
                     </Typography>
                    <TextField
+                        size="small"
                         fullWidth
                         id="email"
                         name="email"
@@ -150,6 +152,7 @@ const AddUser = ({ open, handleClose, handleAddUser,currentUser,editUser }) => {
                   PASSWORD
                  </Typography>
                         <TextField
+                        size="small"
                         fullWidth
                         id="password"
                         name="password"
@@ -259,6 +262,7 @@ const AddUser = ({ open, handleClose, handleAddUser,currentUser,editUser }) => {
                  CONTACT NUMBER
                  </Typography>
                         <TextField
+                        size="small"
                         fullWidth
                         id="contactNumber"
                         name="contactNumber"
@@ -276,6 +280,7 @@ const AddUser = ({ open, handleClose, handleAddUser,currentUser,editUser }) => {
                  ADDRESS
                  </Typography>
                      <TextField
+                       size="small"
                         fullWidth
                         id="address"
                         name="address"
@@ -384,7 +389,7 @@ const AddUser = ({ open, handleClose, handleAddUser,currentUser,editUser }) => {
                         )}
                     </Box> */}
 
-<Box sx={{ mt: 3, mb: 2 }}>
+{/* <Box sx={{ mt: 3, mb: 2 }}>
       <Typography variant="subtitle1" gutterBottom>
         Signature
       </Typography>
@@ -431,33 +436,46 @@ const AddUser = ({ open, handleClose, handleAddUser,currentUser,editUser }) => {
           />
         </Box>
       )}
-    </Box>
+    </Box> */}
                    
                      <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center'}}>
                         <Button
+                        size="small"
                             type="button"
                             onClick={handleClose}
                             variant="contained"
                             sx={{
                                 mr: 2,
-                                backgroundColor: '#23CCEF',
+                                backgroundColor: '#FB404B',
                                 width: '100px',
                                 '&:hover': {
-                                   backgroundColor: '#23CCEF',
-                                   opacity:'0.8' 
+                                   backgroundColor: '#FB404B',
+                                   opacity:'0.8', 
+                                   borderColor: '#FB404B',
+                                   transform: 'translateY(-1px)',
+                                   boxShadow: '0 4px 12px #FB404B',
+                                  
                                 }
                             }}
                         >
                             Cancel
                         </Button>
                         <Button
+                            size="small"
                             type="submit"
                             variant="contained"
                             sx={{
-                                backgroundColor: '#FB404B',
+                                  backgroundColor:'#20B2AA',
+                                  color: '#fff',
+                                  borderColor: '#20B2AA',
+                                  cursor: 'pointer',
+                                  textTransform: 'uppercase',
                                 '&:hover': {
-                                    backgroundColor: '#FB404B',
-                                    opacity:'0.8'
+                                   backgroundColor: '#20B2AA',
+                                   borderColor: '#20B2AA',
+                                   transform: 'translateY(-1px)',
+                                   boxShadow: '0 4px 12px #20B2AA',
+                                   opacity:'0.8'
                                 }
                             }}
                         >
