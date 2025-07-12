@@ -7858,7 +7858,13 @@ const TenderComponent = () => {
                 fontWeight: 600,
                 fontSize: isMobile ? '1.5rem' : '1.75rem',
                 letterSpacing: '0.5px',
-                textAlign: isMobile ? 'center' : 'left'
+                textAlign: isMobile ? 'center' : 'left',
+                pl:{
+                  xs:5,
+                  sm:5,
+                  md:0,
+                  lg:0
+                }
               }}
             >
               TENDER MASTER
