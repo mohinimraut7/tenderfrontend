@@ -91,7 +91,7 @@ const Home = () => {
     <div style={gridStyle} className="containerhome">
       <div className="info-card-container" sx={{width: isSm || isXs? '100%' : '30%'}}>
 
-        {(user?.role === 'Super Admin' || user?.role === 'Admin' || user?.role === 'Executive Engineer' || (user?.role === 'Junior Engineer' && user?.ward === 'Head Office')) &&
+        {/* {(user?.role === 'Super Admin' || user?.role === 'Admin' || user?.role === 'Executive Engineer' || (user?.role === 'Junior Engineer' && user?.ward === 'Head Office')) &&
          (showCMonthAvgTable || showCMonthFaultyTable || showCMonthUDueBill) && (
           <Box sx={{
             display: 'flex',
@@ -118,9 +118,9 @@ const Home = () => {
             {showCMonthFaultyTable && <FaultyTendersCurrentMonth />}
             {showCMonthUDueBill && <UpcomingDueBillCurrentMonth />}
           </Box>
-        )}
+        )} */}
 
-        {(user?.role === 'Super Admin' || user?.role === 'Admin' || user?.role === 'Executive Engineer' || (user?.role === 'Junior Engineer' && user?.ward === 'Head Office')) && (
+        {/* {(user?.role === 'Super Admin' || user?.role === 'Admin' || user?.role === 'Executive Engineer' || (user?.role === 'Junior Engineer' && user?.ward === 'Head Office')) && (
           <Box sx={{
             display: 'flex',
             flexDirection: {
@@ -143,10 +143,23 @@ const Home = () => {
             {showBeforeTwoMonthFaultyTable && <FaultyTendersBeforeTwoMonth />}
             {showOverdueBill && <OverdueBillsTable />}
           </Box>
-        )}
+        )} */}
 
         {(user?.role === 'Super Admin' || user?.role === 'Admin' || user?.role === 'Executive Engineer'|| (user?.role === 'Junior Engineer' && user?.ward === 'Head Office')) && (
-          <InfoCard
+          <Box sx={{width:'100%',mt:{
+            lg:isSidebarOpen?0:2,
+            md:isSidebarOpen?0:0,
+            xs:isSidebarOpen?5:5,
+             sm:isSidebarOpen?2:2 ,
+          }
+          ,ml:{
+            lg:isSidebarOpen?0:2,
+            md:isSidebarOpen?0:0,
+            xs:isSidebarOpen?0:0,
+             sm:isSidebarOpen?0:0,
+          }
+          }}>
+<InfoCard
             IconComponent={Person2OutlinedIcon}
             backgroundColor="#fff"
             className="container-infocard"
@@ -155,6 +168,8 @@ const Home = () => {
             title="Total Tenders"
             count={totalTenderCount} 
           />
+          </Box>
+          
         )}
       </div>
     </div>

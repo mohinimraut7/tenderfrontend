@@ -230,7 +230,7 @@ const columns = (handleDeleteRole,handleEditRole)=>[
         </IconButton>
         <IconButton 
           sx={{
-            color:'#23CCEF',
+            color:'#20B2AA',
             '&:hover': {
               backgroundColor: 'rgba(35, 204, 239, 0.1)',
               transform: 'scale(1.1)'
@@ -519,7 +519,7 @@ const Rolemaster = () => {
                 },
               }}
               pageSizeOptions={[5, 10, 25, 50]}
-              checkboxSelection
+              // checkboxSelection
               disableRowSelectionOnClick
               autoHeight={false}
               sx={{

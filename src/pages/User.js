@@ -253,7 +253,7 @@ const columns = (handleDeleteUser, handleEditUser) => [
         </IconButton>
         <IconButton 
           sx={{
-            color:'#23CCEF',
+            color:'#20B2AA',
             '&:hover': {
               backgroundColor: 'rgba(35, 204, 239, 0.1)',
               transform: 'scale(1.1)'
@@ -567,7 +567,7 @@ const User = () => {
                 },
               }}
               pageSizeOptions={[5, 10, 20, 30]}
-              checkboxSelection
+              // checkboxSelection
               disableRowSelectionOnClick
               autoHeight={false}
               sx={{

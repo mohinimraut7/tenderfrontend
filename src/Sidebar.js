@@ -320,7 +320,7 @@ export default function Sidebar() {
                   color: '#FB404B',
                   alignItems:'center',display:'flex',justifyContent:
                   {
-                    lg:'center',
+                    lg:'flex-end',
                     md:'center',
                     sm:'center',
                     xs:'flex-start'
@@ -346,12 +346,38 @@ export default function Sidebar() {
                     sm:'100%',
                     xs:'100%'
                   }
-                }}><Box sx={{
+                }}>
+                  <Box sx={{
                   // border:'1px solid blue',
+                  color:'#FB404B',
+                  // backgroundColor:'#FB404B',
+                  textTransform:'uppercase',
+                  fontWeight:'bold',
+                  padding:'5px',
+                  borderRadius:'5px',
+                  fontSize:'12px',
+                
                   mr:{lg:2},}}>{user?.role}</Box>
-                <Box style={{fontSize:'15px',
+                   <Box
+    sx={{
+      width: '2px',
+      height: '12px',
+      backgroundColor: '#FB404B',
+      borderRadius: '2px',
+      mr: 1,
+        display: {
+      xs: 'none', // मोबाईल/छोट्या स्क्रीनसाठी दाखवा
+      sm: 'none',
+      md: 'block',  // md आणि त्यापुढे लपवा
+      lg: 'block',
+    },
+    }}
+  />
+
+
+                {/* <Box style={{fontSize:'15px',
                   // border:'1px solid green'
-                  }}>{user?.ward}</Box> 
+                  }}>{user?.ward}</Box>  */}
                 {/* {user?.ward} */}
               </Box>
               <Box>
@@ -359,7 +385,9 @@ export default function Sidebar() {
 
 
 
-                  <Box>
+                  <Box sx={{
+                    // border:"2px solid green"
+                    }}>
                   
                       <IconButton sx={{ color: '#FB404B' }} onClick={handleLogout}>
                         <PowerSettingsNewIcon />
@@ -368,6 +396,25 @@ export default function Sidebar() {
                   
                   </Box>
 
+//                  <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+//   <IconButton
+//     sx={{
+//       backgroundColor: '#FFE5E5', // हलकं लाल बॅकग्राउंड
+//       color: '#FB404B',
+//       '&:hover': {
+//         backgroundColor: '#FFCCCC', // होवर केल्यावर थोडं गडद
+//         transform: 'scale(1.1)', // हलकं झूम इफेक्ट
+//       },
+//       transition: 'all 0.3s ease',
+//       boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.2)', // सौम्य शॅडो
+//       borderRadius: '50%', // गोल बटण
+//       // p: 1.2,
+//     }}
+//     onClick={handleLogout}
+//   >
+//     <PowerSettingsNewIcon fontSize="size" />
+//   </IconButton>
+// </Box>
 
 
                 ) : (
@@ -380,6 +427,14 @@ export default function Sidebar() {
               
            
             </Box>
+
+
+
+
+
+
+
+
 
 
 

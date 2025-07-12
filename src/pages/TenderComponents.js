@@ -7979,7 +7979,7 @@ const TenderComponent = () => {
                   }
                 }}
                 pageSizeOptions={[5, 10, 50, 100]}
-                checkboxSelection
+                // checkboxSelection
                 loading={loading}
                 autoHeight={false}
                 disableVirtualization={false}
