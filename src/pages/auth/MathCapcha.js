@@ -35,7 +35,7 @@ const MathCaptcha = ({ onValidate }) => {
         value={userInput}
         onChange={handleInputChange}
         placeholder="Enter Answer"
-        sx={{ width: "65%" }}
+        sx={{ width: "37%" }}
       />
       <IconButton onClick={refreshCaptcha} color="primary">
         <RefreshIcon />
